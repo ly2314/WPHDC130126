@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!-- saved from url=(0053)http://tommyjswu.github.com/JS-example-todo/todo.html -->
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-        <title>JavaScript todolist</title>
+        <title>JavaScript Bulletin</title>
         <link rel="stylesheet" href="./_files/reset.css" type="text/css">
         <link rel="stylesheet" href="./_files/todo.css" type="text/css">
         <link rel="stylesheet" href="./_files/bootstrap.css" type="text/css">
@@ -81,19 +81,6 @@
 				password.setAttribute('placeholder', 'Password');
 				$('.hero-unit')[0].appendChild(password);
 				$('#password').focus();
-				/*if(prompt("這是禁止事項","") == "UCCU")
-				{
-					var url = "delete.php";
-					xmlhttp = new XMLHttpRequest();
-					xmlhttp.open("GET",url,false);
-					xmlhttp.send(null);
-					alert ("武力介入中。");
-					window.location.reload();
-				}
-				else
-				{
-					alert ("σ`∀′) ﾟ∀ﾟ)σ");
-				}*/
 				password.addEventListener('keydown', function(e)
             	{
 					if(e.keyCode == 13 && password.value !== '')
@@ -136,8 +123,6 @@
 			var todo_input = document.getElementById('todo_input'),
                 todolist   = document.getElementById('todolist'),
                 forceInsert = document.getElementById('forceInsert');
-				
-			//password.style.visibility = 'hidden';
 			Read(1);			
 		    todo_input.addEventListener('keydown', function(e)
             {
@@ -146,7 +131,6 @@
                     NewMessage(user_name.value, todo_input.value, false);
                 }
             });
-        </script>
-    
+        </script>   
 
 </body></html>
