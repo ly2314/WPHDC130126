@@ -2,6 +2,8 @@ WPHDC130126
 ===========
 
  Web Programming Hack Day Club 2013.01.26
+ 
+ Code written by ypf791 and ly2314.<br>
 
  1. Server System Requirements<br>
     PHP support<br>
