@@ -47,8 +47,8 @@
 				var _name = name;
 				if(_name === '') _name = 'NoName';
 				//el.innerHTML = htmlString.replace(/<script/gi, '&lt;script').replace(/\son[a-z]+=/gi, 'XXXX_BLOCKED=');
-				_name = _name.replace(/<script/gi, '&lt;script').replace("javascript", "j@vascript");
-				says = says.replace(/<script/gi, '&lt;script').replace("javascript", "j@vascript");
+				_name = _name.replace(/</gi, '&lt;');
+				says = says.replace(/</gi, '&lt;');
 				user_head.innerHTML = (_name + ' : ');
 				user_head.setAttribute('contenteditable', false);
 				user_head.setAttribute('color', "777700");
