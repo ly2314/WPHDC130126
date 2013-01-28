@@ -124,12 +124,29 @@
 			var todo_input = document.getElementById('todo_input'),
                 todolist   = document.getElementById('todolist'),
                 forceInsert = document.getElementById('forceInsert');
+                user_name = document.getElementById('user_name');
 			Read(1);			
 		    todo_input.addEventListener('keydown', function(e)
             {
                 if(e.keyCode == 13 && todo_input.value !== '' && user_name.value !== '')
                 {
-                    NewMessage(user_name.value, todo_input.value, false);
+                    var name = user_name.value;
+                    var says = todo_input.value;
+                    if (name.length > 10)
+                    {
+                        alert ("名子太長囉啾咪>.^");
+                        user_name.value = "";
+                        todo_input.value = "";
+                    }
+                    else if (says.length > 60)
+                    {
+                        alert ("訊息太長囉啾咪>.^");
+                        todo_input.value = "";
+                    }
+                    else
+                    {
+                        NewMessage(user_name.value, todo_input.value, false);
+                    }
                 }
             });
         </script>   
